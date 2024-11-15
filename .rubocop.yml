@@ -1,8 +1,60 @@
-# Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+inherit_mode:
+  merge:
+    - Exclude
 
-# Overwrite or add rules to create your own house style
-#
-# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+require:
+  - standard
+  - standard-custom
+  - standard-performance
+  - rubocop-capybara
+  - rubocop-factory_bot
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
+inherit_gem:
+  # pundit: config/rubocop-rspec.yml
+  standard: config/ruby-3.2.yml
+  standard-performance: config/base.yml
+  standard-custom: config/base.yml
+  # standard-rails: config/base.yml
+
+AllCops:
+  ActiveSupportExtensionsEnabled: true
+  NewCops: enable
+  ParserEngine: parser_prism
+  SuggestExtensions: false
+  TargetRubyVersion: 3.3
+
+FactoryBot/ConsistentParenthesesStyle:
+  Enabled: false # build/create are just methods, let base rubocop handle them!
+
+Rails/DefaultScope:
+  Enabled: true # lead to unexpected behavior for future developers
+
+Rails/RequireDependency:
+  Enabled: true
+
+Rails/SaveBang:
+  Enabled: true # This should at least be enabled for specs if not project-wide
+
+Rails/ReversibleMigrationMethodDefinition:
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Enabled: true # This use rubocop-disable comment to show you meant to skip validations
+
+RSpec/ExampleLength:
+  CountAsOne: ['array', 'hash', 'heredoc', 'method_call']
+  Exclude:
+    - 'spec/system/**/*'
+
+RSpec/MultipleExpectations:
+  Max: 10 # Allow because we aggregate failures by default (rails_helper.rb)
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpecRails/InferredSpecType:
+  Enabled: false # Inferring from location is 'legacy' config and will be removed eventually
