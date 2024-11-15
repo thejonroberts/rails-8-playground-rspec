@@ -66,4 +66,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  # Enable Code Lens for RSpec
+  gem "ruby-lsp-rails", require: false
+  gem "ruby-lsp-rspec", require: false
 end
