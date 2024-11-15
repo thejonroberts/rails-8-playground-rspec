@@ -1,0 +1,33 @@
+---
+# partial_tag_name_pattern: Regex to validate foo in <foo>.
+# Defaults to /\A[a-z0-9\-\:]+\z/.
+partial_tag_name_pattern: !ruby/regexp /\A[a-z0-9\-\:]+\z/
+
+# partial_attribute_name_pattern: Regex to validate bar in <foo bar=1>.
+# Defaults to /\A[a-zA-Z0-9\-\:]+\z/.
+partial_attribute_name_pattern: !ruby/regexp /\A[a-zA-Z0-9\-\:]+\z/
+
+# allow_single_quoted_attributes: When true, <foo bar='1'> is valid syntax.
+# Defaults to true.
+allow_single_quoted_attributes: false
+
+# allow_unquoted_attributes: When true, <foo bar=1> is valid syntax.
+# Defaults to false.
+allow_unquoted_attributes: false
+
+# javascript_safe_methods: List of methods that return javascript-safe strings.
+# This list is used by SafeErbTester when determining whether ruby interpolation
+# is safe for a given attribute.
+# Defaults to ['to_json'].
+javascript_safe_methods: ['to_json']
+
+# lodash_safe_javascript_expression: Same as javascript_safe_methods,
+# but for lodash templates.
+# Defaults to [/\AJSON\.stringify\(/].
+lodash_safe_javascript_expression: [!ruby/regexp /\AJSON\.stringify\(/]
+
+# javascript_attribute_names: List of all attribute names that contain
+# javascript code. This list is used by SafeErbTester when determining
+# whether or not a given attribute value will be eval'ed as javascript.
+# Defaults to [/\Aon/i] (matches onclick for example).
+javascript_attribute_names: [!ruby/regexp /\Aon/i]
