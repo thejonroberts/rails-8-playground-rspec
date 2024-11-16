@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby file: ".ruby-version"
+
 # Use specific branch of Rails
 gem "rails", github: "rails/rails", branch: "8-0-stable"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 42fd826b7ff87ee4b27b4cf80db2db7bb6a7c1f1
+  revision: a9ea78881cff90005b957bbc7fc1ee9a3caf5c62
   branch: 8-0-stable
   specs:
     actioncable (8.0.0)
@@ -289,7 +289,7 @@ GEM
     rubocop-performance (1.22.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rails (2.26.2)
+    rubocop-rails (2.27.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.52.0, < 2.0)
@@ -434,5 +434,8 @@ DEPENDENCIES
   tzinfo-data
   web-console
 
+RUBY VERSION
+   ruby 3.3.6p108
+
 BUNDLED WITH
-   2.5.23
+   2.5.22
