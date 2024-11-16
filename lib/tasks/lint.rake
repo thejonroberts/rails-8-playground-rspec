@@ -4,11 +4,11 @@ namespace :lint do
     Rake::Task["lint:ruby"].invoke
     Rake::Task["lint:erb"].invoke
     Rake::Task["lint:factories"].invoke
+    Rake::Task["lint:reek"].invoke
     Rake::Task["lint:security"].invoke
     # TODO:
     # Rake::Task["lint:js"].invoke
     # Rake::Task["lint:css"].invoke
-    # Rake::Task["lint:reek"].invoke
   end
 
   desc "Lint Ruby code with RuboCop"
@@ -41,7 +41,12 @@ namespace :lint do
 
   desc "Brakeman security checks"
   task security: :environment do
-    sh("bundle exec brakeman --show-ignored")
+    sh("bundle exec brakeman --no-pager --show-ignored")
+  end
+
+  desc "Run Reek code smells"
+  task reek: :environment do
+    sh("bundle exec reek")
   end
 
   # desc "TODO"
@@ -50,9 +55,5 @@ namespace :lint do
 
   # desc "TODO"
   # task css: :environment do
-  # end
-
-  # desc "TODO"
-  # task reek: :environment do
   # end
 end

@@ -57,6 +57,7 @@ group :development, :test do
   # linters
   gem "erb_lint", require: false
   gem "prism", require: false
+  gem "reek", require: false
   gem "rubocop", require: false
   gem "rubocop-capybara", require: false
   gem "rubocop-factory_bot", require: false
@@ -75,4 +76,5 @@ group :development do
   # Enable Code Lens for RSpec
   gem "ruby-lsp-rails", require: false
   gem "ruby-lsp-rspec", require: false
+  gem "ruby-lsp-reek", require: false
 end
