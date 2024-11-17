@@ -38,5 +38,9 @@ module Rails8PlaygroundRspec
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # End of rails-generated config #
+
+    config.silence_healthcheck_path = "/up"
   end
 end
