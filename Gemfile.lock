@@ -309,7 +309,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.1)
-    rubocop (1.68.0)
+    rubocop (1.66.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -343,9 +343,7 @@ GEM
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 4)
       sorbet-runtime (>= 0.5.10782)
-    ruby-lsp-rails (0.3.26)
-      ruby-lsp (>= 0.21.2, < 0.22.0)
-    ruby-lsp-reek (0.2.0)
+    ruby-lsp-reek (0.3.1)
       reek (~> 6.0, >= 5.0)
       ruby-lsp (~> 0.17, >= 0.12.0)
       sorbet-runtime (~> 0.5, >= 0.5.5685)
@@ -387,10 +385,10 @@ GEM
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
       ostruct
-    standard (1.42.0)
+    standard (1.41.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
-      rubocop (~> 1.68.0)
+      rubocop (~> 1.66.0)
       standard-custom (~> 1.0.0)
       standard-performance (~> 1.5)
     standard-custom (1.0.2)
@@ -466,14 +464,13 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   rubocop-rspec_rails
-  ruby-lsp-rails
   ruby-lsp-reek
   ruby-lsp-rspec
   solid_cable
   solid_cache
   solid_queue
   sqlite3 (>= 2.1)
-  standard
+  standard (>= 1.35.1, != 1.42.0)
   stimulus-rails
   thruster
   turbo-rails

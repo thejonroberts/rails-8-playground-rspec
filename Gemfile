@@ -41,6 +41,9 @@ gem "thruster", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+# gem "ruby-vips"
+# TODO: poppler for pdf rendering
+# TODO: ffmpeg fro video
 
 gem "better_html"
 
@@ -51,6 +54,7 @@ group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
 
+  # gem "capybara"
   gem "factory_bot_rails"
   gem "rspec-rails"
 
@@ -65,7 +69,8 @@ group :development, :test do
   gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
   gem "rubocop-rspec_rails", require: false
-  gem "standard", require: false
+  gem "standard", ">= 1.35.1", "!= 1.42.0", require: false # remove v constraints when v1.42.1 is released
+  # gem 'rubocop-thread_safety', require: false
   # gem "standard-rails", require: false
 end
 
@@ -74,7 +79,6 @@ group :development do
   gem "web-console"
 
   # Enable Code Lens for RSpec
-  gem "ruby-lsp-rails", require: false
   gem "ruby-lsp-rspec", require: false
-  gem "ruby-lsp-reek", require: false
+  gem "ruby-lsp-reek", require: false # , path: "/Users/jon/workspace/OpenSourceProjects/ruby-lsp-reek"
 end

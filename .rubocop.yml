@@ -33,6 +33,9 @@ FactoryBot/ConsistentParenthesesStyle:
 Rails/DefaultScope:
   Enabled: true # lead to unexpected behavior for future developers
 
+Rails/I18nLocaleTexts:
+  Enabled: false
+
 Rails/RequireDependency:
   Enabled: true
 
@@ -47,6 +50,7 @@ Rails/SkipsModelValidations:
 
 RSpec/ExampleLength:
   CountAsOne: ['array', 'hash', 'heredoc', 'method_call']
+  Max: 10
   Exclude:
     - 'spec/system/**/*'
 
