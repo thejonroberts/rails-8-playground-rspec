@@ -37,7 +37,7 @@ module Rails8PlaygroundRspec
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Don't generate system test files.
-    config.generators.system_tests = nil
+    config.generators.system_tests = :rspec
 
     # End of rails-generated config #
 
