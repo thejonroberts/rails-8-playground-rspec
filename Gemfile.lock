@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: dab4ec308fbb90f2f97c7bc62ca4a638f83d62bb
+  revision: 0a7bbeb8bf1dd16ec2ff03b6e12b5802a769e21b
   branch: 8-0-stable
   specs:
     actioncable (8.0.0)
@@ -314,7 +314,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
     uri (1.0.2)
-    useragent (0.16.10)
+    useragent (0.16.11)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
