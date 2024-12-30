@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 9e9fa7c99e8c648b7744cc978e5559d8ca9ae475
+  revision: f66d50d5ea91c2f53c6cff266f3142040d44cb2f
   branch: 8-0-stable
   specs:
     actioncable (8.0.1)
@@ -171,7 +171,7 @@ GEM
     mini_portile2 (2.8.8)
     minitest (5.25.4)
     msgpack (1.7.5)
-    net-imap (0.5.2)
+    net-imap (0.5.4)
       date
       net-protocol
     net-pop (0.1.2)
